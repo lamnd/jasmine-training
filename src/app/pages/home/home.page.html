@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            List all post
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <ion-list class="list-post">
+            <ion-input class="search-post" id="searchText" placeholder="Enter title" [(ngModel)]="searchText" ></ion-input>
+            <ion-button class="search-post" id="searchBtn" (click)="search()">Search</ion-button>
+            <ion-button class="create-post" (click)="navToCreate()" >Create</ion-button>
+            <div *ngFor="let post of posts">
+                <ion-item class="post" *ngIf="post.id < 50" >
+                    <div>
+                        <a routerLink="/detail/{{post.id}}">Id: {{post.id}}</a>
+                        <ion-label>Title: {{post.title}}</ion-label>
+                    </div>
+                </ion-item>
+            </div>
+        </ion-list>
+    </div>
+</ion-content>

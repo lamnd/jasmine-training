@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="goBack()">
+            <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+        <ion-title class="title">Create post</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div>
+        <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()">
+            <label *ngIf="postForm.controls.title?.errors?.required" [ngClass]="'error'"> Please enter
+                Title. </label>
+            <label *ngIf="postForm.controls.title?.errors?.maxlength" [ngClass]="'error'"> Title is too
+                long </label>
+            <ion-input required formControlName="title" placeholder="Enter Title">Title:</ion-input>
+
+            <label *ngIf="postForm.controls.body?.errors?.required" [ngClass]="'error'"> Please enter Body. </label>
+            <label *ngIf="postForm.controls.body?.errors?.maxlength" [ngClass]="'error'"> Body is too long </label>
+            <ion-input required formControlName="body" placeholder="Enter Body">Body:</ion-input>
+            <ion-button type="submit">Create</ion-button>
+        </form>
+    </div>
+</ion-content>

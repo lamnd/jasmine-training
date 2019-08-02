@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="goBack()">
+            <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+        <ion-title class="title">Post detail</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <div class="post-detail">
+            <ion-label class="post-id">Id: {{post.id}}</ion-label>
+            <ion-label class="post-user-id">User ID: {{post.userId}}</ion-label>
+            <ion-label class="post-title">Title: {{post.title}}</ion-label>
+            <ion-label class="post-body">Body: {{post.body}}</ion-label>
+        </div>
+    </div>
+</ion-content>
