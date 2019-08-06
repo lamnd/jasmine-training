@@ -6,7 +6,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {IonicModule} from '@ionic/angular';
 import {RouterTestingModule} from '@angular/router/testing';
 import {HomePage} from '../home/home.page';
-import {ErrorCheck} from '../../Pipe/ErrorCheck';
 
 describe('CreatePage', () => {
     let component: CreatePage;
@@ -17,7 +16,7 @@ describe('CreatePage', () => {
             imports: [ReactiveFormsModule, FormsModule, IonicModule, RouterTestingModule.withRoutes([{
                 path: 'home', component: HomePage
             }])],
-            declarations: [CreatePage, HomePage, ErrorCheck],
+            declarations: [CreatePage, HomePage],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
         })
             .compileComponents().then();

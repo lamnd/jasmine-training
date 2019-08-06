@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {NavController} from '@ionic/angular';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {HomePage} from '../home/home.page';
@@ -9,15 +9,12 @@ import {Router} from '@angular/router';
     templateUrl: './create.page.html',
     styleUrls: ['./create.page.scss'],
 })
-export class CreatePage implements OnInit {
+export class CreatePage {
 
     postForm: FormGroup;
 
     constructor(private router: Router, private navController: NavController, private fb: FormBuilder) {
         this.createForm();
-    }
-
-    ngOnInit() {
     }
 
     goBack() {

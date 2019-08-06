@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import {CreatePage} from './create.page';
-import {ErrorCheck} from '../../Pipe/ErrorCheck';
 
 const routes: Routes = [
   {
@@ -23,6 +22,6 @@ const routes: Routes = [
         RouterModule.forChild(routes),
         ReactiveFormsModule
     ],
-    declarations: [CreatePage, ErrorCheck]
+    declarations: [CreatePage]
 })
 export class CreatePageModule {}

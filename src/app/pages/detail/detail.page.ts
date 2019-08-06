@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {HomePage} from '../home/home.page';
 import {NavController} from '@ionic/angular';
@@ -8,7 +8,7 @@ import {NavController} from '@ionic/angular';
     templateUrl: './detail.page.html',
     styleUrls: ['./detail.page.scss'],
 })
-export class DetailPage implements OnInit {
+export class DetailPage {
     post: {
         id: number;
         title: string;
@@ -19,9 +19,6 @@ export class DetailPage implements OnInit {
 
         this.post = HomePage.allPost.filter(post =>
             post.id.toString() === route.snapshot.params.id)[0];
-    }
-
-    ngOnInit() {
     }
 
     goBack() {

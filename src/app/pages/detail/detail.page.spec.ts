@@ -32,14 +32,12 @@ describe('DetailPage', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should show all 4 text fields', () => {
+    it('should show all 3 text fields', () => {
         const detailPageElement: HTMLElement = fixture.nativeElement;
         const postId = detailPageElement.querySelector('.post-id');
-        const postUserId = detailPageElement.querySelector('.post-user-id');
         const postTitle = detailPageElement.querySelector('.post-title');
         const postBody = detailPageElement.querySelector('.post-body');
         expect(postId).toBeTruthy();
-        expect(postUserId).toBeTruthy();
         expect(postTitle).toBeTruthy();
         expect(postBody).toBeTruthy();
     });

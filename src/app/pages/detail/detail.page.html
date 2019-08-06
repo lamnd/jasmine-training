@@ -8,12 +8,9 @@
 </ion-header>
 
 <ion-content>
-    <div class="ion-padding">
-        <div class="post-detail">
-            <ion-label class="post-id">Id: {{post.id}}</ion-label>
-            <ion-label class="post-user-id">User ID: {{post.userId}}</ion-label>
-            <ion-label class="post-title">Title: {{post.title}}</ion-label>
-            <ion-label class="post-body">Body: {{post.body}}</ion-label>
-        </div>
-    </div>
+    <ion-list>
+        <ion-item class="post-id">Id: {{post.id}}</ion-item>
+        <ion-item class="post-title">Title: {{post.title}}</ion-item>
+        <ion-item class="post-body">Body: {{post.body}}</ion-item>
+    </ion-list>
 </ion-content>
